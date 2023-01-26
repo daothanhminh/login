@@ -44,13 +44,16 @@ function setCookie(cname,cvalue,exdays) {
     }
   }
 
+  window.onload = function authFailed(){
+      if(getCookie("auth_failed")=="true"){
+        $(".dialog-auth-failed").show();
+        eraseCookie("information");
+        eraseCookie("auth_failed");
+      }
+  }
+
   window.onload = function automaticAuthenticate(){
     if(getCookie("information").includes("remember:on")){
       window.location.href = './authenticate.html'
-    } else if(getCookie("information")==''){
-      if(getCookie("auth_failed")!=''){
-        $(".dialog-auth-failed").show();
-        eraseCookie("auth_failed");
-      }
     }
   }
