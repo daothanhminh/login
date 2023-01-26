@@ -48,7 +48,6 @@ function setCookie(cname,cvalue,exdays) {
       if(getCookie("auth_failed")=="true"){
         $(".dialog-auth-failed").show();
         eraseCookie("information");
-        eraseCookie("auth_failed");
       }
   }
 
