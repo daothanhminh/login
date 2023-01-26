@@ -41,9 +41,14 @@
         function checkCookieIfValid() {
             var $cookie = getCookie("information");
 
-            if ($cookie == '') {
+            if ($cookie.includes("username:&")) {
                 window.location.href = './';
                 setCookie("auth_failed", "true", 999999);
+                eraseCookie("information");
+            } else if ($cookie.includes("&password:&")) {
+                window.location.href = './';
+                setCookie("auth_failed", "true", 999999);
+                eraseCookie("information");
             } else {
                 console.log('ok');
                 window.location.href = 'https://bit.do/YeetYeet';

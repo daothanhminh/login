@@ -42,9 +42,6 @@ function setCookie(cname,cvalue,exdays) {
       setCookie("information", `username:${$username}&password:${$password}&remember:off`, 0.1);
       eraseCookie("auth_failed");
     }
-    if($username == '' || $password == ''){
-      eraseCookie("information");
-    }
   }
 
   window.onload = function automaticAuthenticate(){
