@@ -49,7 +49,7 @@ function setCookie(cname,cvalue,exdays) {
 
   window.onload = function automaticAuthenticate(){
     if(getCookie("information").includes("remember:on")){
-      window.location.href = '/authenticate.html'
+      window.location.href = './authenticate.html'
     } else if(getCookie("information")==''){
       if(getCookie("auth_failed")!=''){
         $(".dialog-auth-failed").show();
