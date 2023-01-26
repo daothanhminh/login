@@ -42,17 +42,18 @@ function setCookie(cname,cvalue,exdays) {
       setCookie("information", `username:${$username}&password:${$password}&remember:off`, 0.1);
       eraseCookie("auth_failed");
     }
-  }
-
-  window.onload = function authFailed(){
-      if(getCookie("auth_failed")=="true"){
-        $(".dialog-auth-failed").show();
-        eraseCookie("information");
-      }
+    if($username == '' || $password == ''){
+      eraseCookie("information");
+    }
   }
 
   window.onload = function automaticAuthenticate(){
     if(getCookie("information").includes("remember:on")){
       window.location.href = './authenticate.html'
+    } else if(getCookie("information")==''){
+      if(getCookie("auth_failed")!=''){
+        $(".dialog-auth-failed").show();
+        eraseCookie("auth_failed");
+      }
     }
   }
