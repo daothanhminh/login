@@ -1,12 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta http-equiv="Refresh" content="0;url=../index.html"/>
-</head>
-<body>
+  
+  <title>Đăng nhập | Cổng Thông tin Chính phủ Bảo Đại</title>
+    
+    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name='viewport' content='width=device-width, initial-scale=0.53'>
+    
+  <meta name="description" content="Đăng nhập | Cổng Thông tin Chính phủ Bảo Đại"/>
+  <meta name="keywords" content=""/>
+  <meta name="Author" content="Cổng Thông tin Chính phủ Bảo Đại" />
+  <meta name="copyright" content="Đăng nhập | Cổng Thông tin Chính phủ Bảo Đại" />
+    
+    
+    
+    
+    
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="https://baodaigov.github.io/login/" />
+  <meta property="og:title" content="Đăng nhập | Cổng Thông tin Chính phủ Bảo Đại" />
+  <meta property="og:description" content="" />
+    
+  <meta property="og:url" content="https://baodaigov.github.io/login/"/>
+  <link rel="canonical" href="https://baodaigov.github.io/login/" />
+    
+    
+  <link href="https://baodaigov.github.io/assets/image/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
+  <link rel="stylesheet" href="https://baodaigov.github.io/login/assets/css/all.min.css"/>
+  <link rel="preload" href="https://baodaigov.github.io/login/assets/css/all.min.css" as="style"/>
+  <link rel="stylesheet" href="https://baodaigov.github.io/ttdv/assets/css/fontawesome.css"/>
+  <link rel="preload" href="https://baodaigov.github.io/ttdv/assets/css/fontawesome.css" as="style"/>
+  <link rel="stylesheet" href="https://baodaigov.github.io/assets/css/all.min.css"/>
+  <link rel="preload" href="https://baodaigov.github.io/assets/css/all.min.css" as="style"/>
+  <link rel="preload" as="script" href="https://baodaigov.github.io/assets/js/jquery.min.js">
+  <script type="text/javascript" src="https://baodaigov.github.io/assets/js/jquery.min.js"></script>
+  
+    
+  <!-- Code injected by live-server extension -->
+  <script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script>
+  <script type="text/javascript" src="https://baodaigov.github.io/login/assets/js/signin.js"></script>
+</head><body style="padding:0px;margin:0px;">
+  <div class="wrapper">
+    <img src="https://baodaigov.github.io/login/assets/img/coat_of_arms_w.png" alt="Coat of Arms" height="185px" width="180px" class="coa">
+    <div class="wrapper-inside">
+      <main class="dialog">
+        <div class="dialog-auth-failed">
+          <p>Đăng nhập không thành công. Vui lòng kiểm tra lại.</p>
+        </div>
+          <div class="dialog-field">
+            <div class="dialog-field-input">
+              <input type="password" id="id_new_password" name="password" maxlength="150" placeholder="Nhập mật khẩu mới" autocomplete="off" autofocus required/>
+            </div>
+          </div>
+          <div class="dialog-field" style="margin-bottom: 0;">
+            <button onclick="changePassword()" class="button-submit">
+              <p>Thay đổi</p>
+            </button>
+          </div>
+      </main>
+    </div>
+  </div>
 </body>
 </html>

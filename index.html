@@ -7,7 +7,7 @@
     
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name='viewport' content='width=device-width, initial-scale=0.5'>
+  <meta name='viewport' content='width=device-width, initial-scale=0.53'>
     
   <meta name="description" content="Đăng nhập | Cổng Thông tin Chính phủ Bảo Đại"/>
   <meta name="keywords" content=""/>
@@ -29,8 +29,8 @@
     
   <link href="https://baodaigov.github.io/assets/image/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     
-  <link rel="stylesheet" href="./assets/css/all.min.css"/>
-  <link rel="preload" href="./assets/css/all.min.css" as="style"/>
+  <link rel="stylesheet" href="https://baodaigov.github.io/login/assets/css/all.min.css"/>
+  <link rel="preload" href="https://baodaigov.github.io/login/assets/css/all.min.css" as="style"/>
   <link rel="stylesheet" href="https://baodaigov.github.io/ttdv/assets/css/fontawesome.css"/>
   <link rel="preload" href="https://baodaigov.github.io/ttdv/assets/css/fontawesome.css" as="style"/>
   <link rel="stylesheet" href="https://baodaigov.github.io/assets/css/all.min.css"/>
@@ -76,26 +76,25 @@
     }
     // ]]>
   </script>
-  <script type="text/javascript" src="./assets/js/cookie.js"></script>
-</head><body style="padding:0px;margin:0px;" >
+  <script type="text/javascript" src="https://baodaigov.github.io/login/assets/js/signin.js"></script>
+</head><body style="padding:0px;margin:0px;">
   <div class="wrapper">
-    <img src="./assets/img/coat_of_arms_w.png" alt="Coat of Arms" height="165px" width="160px" class="coa">
+    <img src="https://baodaigov.github.io/login/assets/img/coat_of_arms_w.png" alt="Coat of Arms" height="185px" width="180px" class="coa">
     <div class="wrapper-inside">
       <main class="dialog">
-        <form style="margin: 0;" action="./authenticate.html" method="get" autocomplete="off" novalidate>
           <div class="dialog-auth-failed">
             <p>Đăng nhập không thành công. Vui lòng kiểm tra lại.</p>
           </div>
           <div class="dialog-field">
             <div class="dialog-field-input">
               <i style="margin-right:2px" class="fa-regular fa-user"></i>
-              <input type="text" id="id_username" name="username" maxlength="150" placeholder="Tên đăng nhập" autofocus required/>
+              <input type="text" id="id_username" name="username" maxlength="150" placeholder="Tên đăng nhập" autocomplete="off" autofocus required/>
             </div>
           </div>
           <div class="dialog-field">
             <div class="dialog-field-input">
               <i class="fa-regular fa-key"></i>
-              <input type="password" id="id_password" name="password" maxlength="150" placeholder="Mật khẩu" autofocus required/>
+              <input type="password" id="id_password" name="password" maxlength="150" placeholder="Mật khẩu" autocomplete="off" autofocus required/>
             </div>
           </div>
           <div class="dialog-field">
@@ -104,17 +103,16 @@
                 <input type="checkbox" id="remember" name="remember"/>
                 Ghi nhớ tôi
               </div>
-              <a href="./forgot-password/" class="forgot-password">
+              <a href="https://baodaigov.github.io/login/forgot-password/" class="forgot-password">
                 <i>Quên mật khẩu?</i>
               </a>
             </div>
           </div>
           <div class="dialog-field" style="margin-bottom: 0;">
-            <button onclick="checkCookie();" class="button-submit">
+            <button onclick="checkInformation()" class="button-submit">
               <p>Đăng nhập</p>
             </button>
           </div>
-        </form>
       </main>
     </div>
   </div>
