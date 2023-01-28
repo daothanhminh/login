@@ -3,7 +3,7 @@ function setCookie(cname,cvalue) {
     let time = 30*60*1000
     d.setTime(d.getTime() + time);
     let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=../../";
   }
 
   function getCookie(cname) {
@@ -20,10 +20,6 @@ function setCookie(cname,cvalue) {
       }
     }
     return "";
-  }
-
-  function eraseCookie(cname) {
-    document.cookie = cname+"=; expires = Thu, 01 Jan 1970 00:00:00 GMT"
   }
 
   function checkInformation() {
@@ -81,7 +77,7 @@ function setCookie(cname,cvalue) {
             };
             localStorage.setItem("info", JSON.stringify(info));
             $("#id_new_password").val("");
-            window.location.href="/index.html";
+            window.location.href="https://baodaigov.github.io/login/index.html";
             setCookie("pass_changed","true");
           }
         }
