@@ -3,7 +3,7 @@ function setCookie(cname,cvalue) {
     let time = 30*60*1000
     d.setTime(d.getTime() + time);
     let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=../../";
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
 
   function getCookie(cname) {
